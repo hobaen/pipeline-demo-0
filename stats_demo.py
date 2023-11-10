@@ -10,9 +10,10 @@ def calculate_mean(numbers):
     """
     return None
 
-def caLCulate_median(numbers):
-  
+def calculate_median(numbers):
+
     return None
+
 def calculate_mode(numbes):
     return None
 
