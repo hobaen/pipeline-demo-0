@@ -3,16 +3,17 @@ This code calculates and displays descriptive statistics for a
 list of numbers that is passed in to the program
 """
 
+from statistics import mean, median
 
 def calculate_mean(numbers):
     """
     Calculate and return the mean of a list of numbers
     """
-    return None
+    return mean(numbers)
 
 def calculate_median(numbers):
 
-    return None
+    return median(numbers)
 
 def calculate_mode(numbes):
     return None
