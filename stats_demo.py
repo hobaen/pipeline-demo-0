@@ -8,22 +8,52 @@ def calculate_mean(numbers):
     """
     Calculate and return the mean of a list of numbers
     """
-    return None
+    total_sum = sum(numbers)
+    mean = total_sum/len(numbers)
 
+    return mean
 
 
 def caLCulate_median(numbers):
-  
-    return None
-def calculate_mode(numbes):
-    return None
+    
+    sorted_list = sorted(numbers) "Sort list and divide it by 2 to find the mean."
 
-def calculate_standard_deviation(nubers):
-    return None
+    middle_index = len(sorted_list) // 2
 
+    if len(sorted_list) % 2 == 1:
+        median = numbers[middle_index]
+    else:
+        median = (sorted_list [middle_index] + sorted_list[middle_index]) / 2
+
+    return median
+
+def calculate_mode(numbers):
+
+    number_counts = Counter(numbers)
+
+    max_frequency = max(number_counts.values())
+
+    mode = [number for number, frequency in number_counts.items() if frequency == max_frequency]
+
+    return mode
+
+def calculate_standard_deviation(numbers):
+    
+    mean = sum(numbers) / len(numbers)
+    
+    sum_squared_diff = sum((x - mean) ** 2 for x in numbers)
+    
+    variance = sum_squared_diff / len(numbers)
+    
+    standard_deviation = math.sqrt(variance)
+    
+    return standard_deviation
 
 def calculate_range(numbers):
-    return None
+
+    datarange = max(numbers) - min(numbers)
+
+    return datarange
 def calculate_statistics(umbers):
     descriptiveStats = {'mean': calculate_mean(numbers), 'median':calculate_median(numbers),'mode':calculate_mode(numbers),'standard_deviation': calculate_standard_deviation(numbers),'range':calculate_range(numbers)
     }
