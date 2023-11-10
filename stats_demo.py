@@ -1,5 +1,5 @@
 """
-This code calculates and displays descriptive statistics for a 
+This code calculates and displays descriptive statistics for a
 list of numbers that is passed in to the program
 """
 import numpy as np
@@ -13,8 +13,6 @@ def calculate_mean(numbers):
 
     for num in numbers:
         total += num
-    
-    
     return total / len(numbers)
 
 
@@ -30,22 +28,17 @@ def calculate_median(numbers):
 
     else:
         return (numbers[len(numbers) // 2] + numbers[len(numbers) // 2 - 1]) / 2
-  
 
 def calculate_mode(numbers):
-        
         return statistics.mode(numbers)
-    
 
 def calculate_standard_deviation(numbers):
 
 
     return statistics.stdev(numbers)
-    
 
 def calculate_range(numbers):
 
-    
     return (max(numbers) - min(numbers))
 
 def calculate_statistics(numbers):
