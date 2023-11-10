@@ -3,6 +3,7 @@ This code calculates and displays descriptive statistics for a
 list of numbers that is passed in to the program
 """
 import numpy as np
+import statistics
 
 def calculate_mean(numbers):
     """
@@ -19,37 +20,27 @@ def calculate_mean(numbers):
 
 
 def calculate_median(numbers):
-    medIndex = (len(numbers) // 2)
+    numbers.sort()
+
+    if not numbers:
+        return None
+
+    if len(numbers) % 2 != 0:
+        return numbers[len(numbers) // 2]
+
+    else:
+        return (numbers[len(numbers) // 2] + numbers[len(numbers) // 2 - 1]) / 2
   
-    return numbers[medIndex]
 
 def calculate_mode(numbers):
-    frequency_table = {}
-    for num in numbers:
-        if num in frequency_table:
-            frequency_table[num] += 1
-        else:
-            frequency_table[num] = 1
-
-        max_frequency = max(frequency_table.values())
-
-    if max_frequency > 1:
-        return max(frequency_table.keys())
-    else:
-        return None
+        
+        return statistics.mode(numbers)
     
 
 def calculate_standard_deviation(numbers):
-    
-    mean = calculate_mean(numbers)
 
-    squared_deviations = [(x - mean)**2 for x in numbers]
 
-    variance = calculate_mean(squared_deviations)
-
-    standard_deviation = np.sqrt(variance)
-
-    return standard_deviation
+    return statistics.stdev(numbers)
     
 
 def calculate_range(numbers):
