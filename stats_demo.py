@@ -22,7 +22,7 @@ def calculate_mode(numbes):
 def calculate_standard_deviation(nubers):
     mean = calculate_mean(numbers)
     variance = sum((x - mean) ** 2 for x in numbers) / (len(numbers) - 1)
-    std_dev = math.sqrt(variance)
+    return math.sqrt(variance)
 
 def calculate_range(numbers):
     return max(numbers) - min(numbers)
