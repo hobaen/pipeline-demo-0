@@ -2,7 +2,6 @@
 This code calculates and displays descriptive statistics for a
 list of numbers that is passed in to the program
 """
-import numpy as np
 import statistics
 
 def calculate_mean(numbers):
@@ -15,30 +14,22 @@ def calculate_mean(numbers):
         total += num
     return total / len(numbers)
 
-
-
 def calculate_median(numbers):
     numbers.sort()
-
     if not numbers:
         return None
-
     if len(numbers) % 2 != 0:
         return numbers[len(numbers) // 2]
-
     else:
         return (numbers[len(numbers) // 2] + numbers[len(numbers) // 2 - 1]) / 2
 
 def calculate_mode(numbers):
-        return statistics.mode(numbers)
+    return statistics.mode(numbers)
 
 def calculate_standard_deviation(numbers):
-
-
     return statistics.stdev(numbers)
 
 def calculate_range(numbers):
-
     return (max(numbers) - min(numbers))
 
 def calculate_statistics(numbers):
