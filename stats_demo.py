@@ -8,22 +8,25 @@ def calculate_mean(numbers):
     """
     Calculate and return the mean of a list of numbers
     """
-    return None
-
-
+    return sum(numbers) / len(numbers)
 
 def caLCulate_median(numbers):
-  
-    return None
+    return numbers[len(numbers)/2]
+
 def calculate_mode(numbes):
-    return None
+    counter = Counter(numbers)
+    max_freq = max(counter.values())
+    mode = [num for num, freq in counter.items() if freq == max_freq]
+    return mode
 
 def calculate_standard_deviation(nubers):
-    return None
-
+    mean = calculate_mean(numbers)
+    variance = sum((x - mean) ** 2 for x in numbers) / (len(numbers) - 1)
+    std_dev = math.sqrt(variance)
 
 def calculate_range(numbers):
-    return None
+    return max(numbers) - min(numbers)
+    
 def calculate_statistics(umbers):
     descriptiveStats = {'mean': calculate_mean(numbers), 'median':calculate_median(numbers),'mode':calculate_mode(numbers),'standard_deviation': calculate_standard_deviation(numbers),'range':calculate_range(numbers)
     }
