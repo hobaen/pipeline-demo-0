@@ -20,8 +20,7 @@ def calculate_median(numbers):
         return None
     if len(numbers) % 2 != 0:
         return numbers[len(numbers) // 2]
-    else:
-        return (numbers[len(numbers) // 2] + numbers[len(numbers) // 2 - 1]) / 2
+    return (numbers[len(numbers) // 2] + numbers[len(numbers) // 2 - 1]) / 2
 
 def calculate_mode(numbers):
     return statistics.mode(numbers)
@@ -33,9 +32,9 @@ def calculate_range(numbers):
     return (max(numbers) - min(numbers))
 
 def calculate_statistics(numbers):
-    descriptiveStats = {'mean': calculate_mean(numbers), 'median':calculate_median(numbers),'mode':calculate_mode(numbers),'standard_deviation': calculate_standard_deviation(numbers),'range':calculate_range(numbers)
+    descriptive_stats = {'mean': calculate_mean(numbers), 'median':calculate_median(numbers),'mode':calculate_mode(numbers),'standard_deviation': calculate_standard_deviation(numbers),'range':calculate_range(numbers)
     }
-    return descriptiveStats
+    return descriptive_stats
 if __name__ == "__main__":
     data = []
     print("Enter numbers (type 'done' to finish): ")
