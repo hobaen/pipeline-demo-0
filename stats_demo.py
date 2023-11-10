@@ -15,6 +15,9 @@ def calculate_mean(numbers):
     return total / len(numbers)
 
 def calculate_median(numbers):
+    """
+    Calculate and return the median of a list of numbers
+    """
     numbers.sort()
     if not numbers:
         return None
@@ -23,16 +26,32 @@ def calculate_median(numbers):
     return (numbers[len(numbers) // 2] + numbers[len(numbers) // 2 - 1]) / 2
 
 def calculate_mode(numbers):
+    """
+    Calculate and return the mode of a list of numbers
+    """
     return statistics.mode(numbers)
 
 def calculate_standard_deviation(numbers):
+    """
+    Calculate and return the standard deviation of a list of numbers
+    """
     return statistics.stdev(numbers)
 
 def calculate_range(numbers):
+    """
+    Calculate and return the range of a list of numbers
+    """
     return (max(numbers) - min(numbers))
 
 def calculate_statistics(numbers):
-    descriptive_stats = {'mean': calculate_mean(numbers), 'median':calculate_median(numbers),'mode':calculate_mode(numbers),'standard_deviation': calculate_standard_deviation(numbers),'range':calculate_range(numbers)
+    """
+    Calculate and return the statistics of a list of numbers
+    """
+    descriptive_stats = {'mean': calculate_mean(numbers),
+    'median':calculate_median(numbers),
+    'mode':calculate_mode(numbers),
+    'standard_deviation': calculate_standard_deviation(numbers),
+    'range':calculate_range(numbers)
     }
     return descriptive_stats
 if __name__ == "__main__":
